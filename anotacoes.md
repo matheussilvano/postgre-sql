@@ -87,7 +87,7 @@ create table nometabela (
   observacoes text,
 
   constraint pk_cln_idcliente primary key (idcliente)
-)
+);
 ```
 - Legenda:
   - integer: número inteiro
@@ -105,3 +105,11 @@ create table nometabela (
 insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
 values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Brasileira', 'Rua Joaquim Nabuco', '23', 'Casa', 'Cidade Nova', 'Porto União', 'SC');
 ```
+
+## Consultar dados
+- O comando utilizado é o select
+- Selecionar tudo: `select * from nometabela;`
+- Selecionar dados específicos: `select nome, data_nascimento from cliente;`
+- Selecionar campos renomeando-os: `select nome, data_nascimento as "Data de Nascimento" from cliente;`
+- Concatena dois campos: `select 'CPF: ' || cpf || ' RG: ' || rg as "CPF e RG" from cliente;`
+- Seleciona os primeiros clientes: `select * from cliente limit 3;`
