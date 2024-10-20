@@ -51,3 +51,4 @@
 - O código criado em SQL é o mesmo utilizado em outros SGBDs
 - DDL: É a linguagem SQL de definição de dados
 - DML: É a linguagemm SQL para manipulação de dados
+- Link dos materiais do Curso: https://drive.google.com/drive/folders/12sDuhZTNDzS3BgfqCiLgAyccNlOAYj-n?usp=sharing
