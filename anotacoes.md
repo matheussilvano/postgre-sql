@@ -113,3 +113,7 @@ values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Br
 - Selecionar campos renomeando-os: `select nome, data_nascimento as "Data de Nascimento" from cliente;`
 - Concatena dois campos: `select 'CPF: ' || cpf || ' RG: ' || rg as "CPF e RG" from cliente;`
 - Seleciona os primeiros clientes: `select * from cliente limit 3;`
+- Seleciona com um filtro específico: `select nome, data_nascimento from cliente where data_nascimento > '2000-01-01';`
+- Seleciona somente nomes que comecem com o caractere "C": `select nome from cliente where nome like 'C%';`
+- Seleciona somente nomes com o caractere "C" em qualquer posição: `select nome from cliente where nome like '%c%';`
+- Seleciona registros entre duas datas: `select nome, data_nascimento from cliente where data_nascimento between '1990-01-01' and '1998-01-01';`
