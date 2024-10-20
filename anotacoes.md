@@ -45,4 +45,9 @@
    - Usuários Finais
    - Administrador de dados
    - Administrador de banco de dados (DBA - Database administrator)
-
+- O acesso ao banco de dados pode ser realizado pela linguagem SQL (Structured Query Language)
+- Foi desenvolvida nos anos 1970
+- É a linguagem padrão para trabalhar com bases dados relacionais
+- O código criado em SQL é o mesmo utilizado em outros SGBDs
+- DDL: É a linguagem SQL de definição de dados
+- DML: É a linguagemm SQL para manipulação de dados
