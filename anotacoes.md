@@ -99,3 +99,9 @@ create table nometabela (
 
 - As colunas ficam salvas em: Databeses > NomeDoDatabase > Schemas > Public > Tables > nometabela > Columns
 - As constraints ficam salvas em: Databeses > NomeDoDatabase > Schemas > Public > Tables > nometabela > Constraints
+
+- Inserir dados na tabela:
+```
+insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Brasileira', 'Rua Joaquim Nabuco', '23', 'Casa', 'Cidade Nova', 'Porto União', 'SC');
+```
