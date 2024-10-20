@@ -86,3 +86,47 @@ select nome, rg from cliente where rg is null;
 select nome from cliente order by nome;
 
 select nome from cliente order by nome desc;
+
+-- Exercícios:
+-- O nome, o gênero e a profissão de todos os clientes, ordenado pelo nome em ordem decrescente
+select nome, genero, profissao from cliente order by nome desc;
+
+-- Os clientes que tenham a letra “R” no nome:
+select nome from cliente where nome like '%r%';
+
+-- Os clientes que o nome inicia com a letra “C”
+select nome from cliente where nome like 'C%';
+
+-- Os clientes que o nome termina com a letra “A”
+select nome from cliente where nome like '%a';
+
+-- Os clientes que moram no bairro “Centro”
+select nome, bairro from cliente where bairro like 'Centro';
+
+-- Os clientes que moram em complementos que iniciam com a letra “A”
+select nome, complemento from cliente where complemento like 'A%';
+
+-- Somente os clientes do sexo feminino
+select nome, genero from cliente where genero like 'F';
+
+-- Os clientes que não informaram o CPF
+select nome, cpf from cliente where cpf is null;
+
+-- O nome e a profissão dos clientes, ordenado em ordem crescente pelo nome da profissão
+select nome, profissao from cliente order by profissao;
+
+-- Os clientes de nacionalidade “Brasileira”
+select nome, nacionalidade from cliente where nacionalidade like 'Brasileira';
+
+-- Os clientes que informaram o número da residência
+select nome, numero from cliente where numero is not null;
+
+-- Os clientes que moram em Santa Catarina
+select nome, uf from cliente where uf like 'SC';
+
+-- Os clientes que nasceram entre 01/01/2000 e 01/01/2002
+select nome, data_nascimento from cliente where data_nascimento between '2000-01-01' and '2002-01-01';
+
+-- O nome do cliente e o logradouro, número, complemento, bairro, município e UF concatenado de todos os clientes
+select 'Nome: ' || nome || ' Logradouro: ' || logradouro || ' Número: ' || numero || ' Complemento: ' || complemento || ' Bairro: ' || bairro || ' Município: ' || municipio || ' UF: ' || uf as "Endereço" from cliente;
+
