@@ -5,3 +5,44 @@
 - Tópicos especiais
 - Álgebra relacional
 - Projeto de banco de dados
+
+# Conceitos básicos
+- Pode estar presente em qualquer lugar independente do uso de tecnologia
+- Exemplos
+  - Caderno
+  - Lista Telefônica
+  - Agenda
+- Com base em dados é possível gerar diversos relatórios
+- Banco de Dados pode ser definido como "uma coleção de dados persistentes usada pelos sistemas de informação de uma determinada empresa"
+- Qualquer empresa precisa manter muitos dados sobre suas operações
+- Em resumo, é um conjunto de várias tabelas, onde cada tabela guarda um conjunto de dados
+- Operações que podem ser realizadas em um banco de dados:
+  - Inserir
+  - Buscar
+  - Excluir
+  - Alterar
+- Permite que os usuários busquem e atualizem os dados quando necessários
+- Um sistema de banco de dados envolve principalmente quatro componentes:
+ - Dados
+   - É o que está armazenado no banco de dados
+   - Precisam ser integrados
+   - São compartilhados
+   - Precisam ser persistentes
+ - Hardware
+   - É a máquina/computador/servidor em que o sistema de banco de dados irá funcionar
+   - Volumes de armazenamento
+   - Dispositivos de entrada e saída
+   - Processador
+   - Memória
+ - Software
+   - Entre o banco de dados físico e os usuários existe uma camada de software conhecida como gerenciador ou servidor de banco de dados
+   - É mais conhecido como Sistema Gerenciador de Banco de Dados (SGBD)
+   - No curso, será usado o PostgreSQL
+   - Realiza o tratamento das requisições (inclusão, alteração, consulta e exclusão)
+   - Isola os usuários dos detalhes do nível de hardware
+ - Usuários
+   - Programadores de aplicações (liguagem de programação)
+   - Usuários Finais
+   - Administrador de dados
+   - Administrador de banco de dados (DBA - Database administrator)
+
