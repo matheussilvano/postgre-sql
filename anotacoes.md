@@ -117,3 +117,6 @@ values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Br
 - Seleciona somente nomes que comecem com o caractere "C": `select nome from cliente where nome like 'C%';`
 - Seleciona somente nomes com o caractere "C" em qualquer posição: `select nome from cliente where nome like '%c%';`
 - Seleciona registros entre duas datas: `select nome, data_nascimento from cliente where data_nascimento between '1990-01-01' and '1998-01-01';`
+- Seleciona somente registros com um campo não preenchido: `select nome, rg from cliente where rg is null;`
+- Ordena os registros por ordem alfabética: `select nome from cliente order by nome;`
+- Ordena os registros por ordem decrescente: `select nome from cliente order by nome desc;`
