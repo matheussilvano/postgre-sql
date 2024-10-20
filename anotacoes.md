@@ -52,3 +52,50 @@
 - DDL: É a linguagem SQL de definição de dados
 - DML: É a linguagemm SQL para manipulação de dados
 - Link dos materiais do Curso: https://drive.google.com/drive/folders/12sDuhZTNDzS3BgfqCiLgAyccNlOAYj-n?usp=sharing
+
+# Tabelas e consultas
+- Base de dados de pedidos
+   - Clientes, fornecedores, municípios, pedidos
+- Criação de tabelas
+- Inserção de dados
+- Chaves primárias e estrangeiras
+- Consultas básicas e avançadas
+  - Agrupamentos, junções(joins), subconsultas
+- View, campos autoincremento, índices
+- Mais de 180 exercícios
+- Avaliação prática com 50 questões
+
+## Tabelas de clientes
+- Clicar com o botão direito na database > Query tool
+- Criar tabela:
+```
+create table nometabela (
+  idcliente integer not null,
+  nome varchar(50) not null,
+  cpf char(11),
+  rg varchar(15),
+  data_nascimento date,
+  genero char(1),
+  profissao varchar(30),
+  nacionalidade varchar(30),
+  logradouro varchar(30),
+  numero varchar(10),
+  complemento varchar(30),
+  bairro varchar(30),
+  municipio varchar(30),
+  uf varchar(30),
+  observacoes text,
+
+  constraint pk_cln_idcliente primary key (idcliente)
+)
+```
+- Legenda:
+  - integer: número inteiro
+  - varchar: até (n) caracteres
+  - char: exatamente (n) caracteres
+  - not null: preenchimento obrigatório
+  - Constraint: Restrição
+  - pk: Primary key
+
+- As colunas ficam salvas em: Databeses > NomeDoDatabase > Schemas > Public > Tables > nometabela > Columns
+- As constraints ficam salvas em: Databeses > NomeDoDatabase > Schemas > Public > Tables > nometabela > Constraints
