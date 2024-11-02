@@ -129,6 +129,12 @@ values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Br
 - Deleta um cliente: `delete from cliente where idcliente = 16`
 - Deletar tudo: `delete from cliente`
 
+### Alter table
+- Altera a estrutura da tabela
+- `alter table cliente rename column profissao to idprofissao;`
+- `alter table cliente drop idprofissao`
+- `alter table cliente alter column idprofissao type integer;`
+
 ## Chaves estrangeiras
 
 ### Criação de outras tabelas
@@ -147,4 +153,17 @@ insert into profissao (idprofissao, nome) values (3, 'Pedreiro');
 insert into profissao (idprofissao, nome) values (4, 'Jornalista');
 insert into profissao (idprofissao, nome) values (5, 'Professor');
 ```
+
+### Troca do campo para seus ids respectivos
+- Remove a coluna profissao (realizar backup dos dados caso existam): `alter table cliente drop profissao;`
+- Cria a coluna idprofissao para a chave estrangeira: `alter table cliente add idprofissao type integer;`
+- Adiciona a chave estrangeira da profissao `alter table cliente add constraint fk_cln_idprofissao foreign key (idprofissao) references profissao (idprofissao);`
+```
+update cliente set idprofissao = 1 where idcliente in (1, 9, 10, 12, 15, 17);
+update cliente set idprofissao = 2 where idcliente = 2;
+update cliente set idprofissao = 3 where idcliente = 3;
+update cliente set idprofissao = 4 where idcliente in (4, 5);
+update cliente set idprofissao = 5 where idcliente in (6, 7, 8, 13);
+```
+- Após realizar isso, as profissões não podem ser mais excluídas pois quebram a regra de chaves estrangeiras
 
