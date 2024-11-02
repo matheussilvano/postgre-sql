@@ -120,3 +120,11 @@ values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Br
 - Seleciona somente registros com um campo não preenchido: `select nome, rg from cliente where rg is null;`
 - Ordena os registros por ordem alfabética: `select nome from cliente order by nome;`
 - Ordena os registros por ordem decrescente: `select nome from cliente order by nome desc;`
+
+## Update e delete
+### Update
+- Altera um campo de um cliente: `update cliente set nome = 'Roberto' where idcliente = 1;`
+
+### Delete
+- Deleta um cliente: `delete from cliente where idcliente = 16`
+- Deletar tudo: `delete from cliente`
