@@ -128,3 +128,23 @@ values (1, 'Manoel', '88828383821', '32323', '2001-01-30', 'M', 'Estudante', 'Br
 ### Delete
 - Deleta um cliente: `delete from cliente where idcliente = 16`
 - Deletar tudo: `delete from cliente`
+
+## Chaves estrangeiras
+
+### Criação de outras tabelas
+```
+create table profissao (
+  id profissao integer not null,
+  nome varchar(30) not null,
+
+  constraint pk_prf_idprofissao primary key (idprofissao),
+  constraint un_prf_nome unique (nome)
+);
+
+insert into profissao (idprofissao, nome) values (1, 'Estudante');
+insert into profissao (idprofissao, nome) values (2, 'Engenheiro');
+insert into profissao (idprofissao, nome) values (3, 'Pedreiro');
+insert into profissao (idprofissao, nome) values (4, 'Jornalista');
+insert into profissao (idprofissao, nome) values (5, 'Professor');
+```
+
